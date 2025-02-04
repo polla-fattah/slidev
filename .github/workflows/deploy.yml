@@ -22,7 +22,7 @@ jobs:
         run: npm install -g @slidev/cli
 
       - name: Build Slidev
-        run: slidev build --base /your-repo-name/   # Replace with your repo name
+        run: slidev build --base /slidev/   # Replace with your repo name
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

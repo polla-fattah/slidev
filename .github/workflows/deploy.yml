@@ -3,7 +3,7 @@ name: Deploy Slidev
 on:
   push:
     branches:
-      - main  # or another branch you use
+      - main
 
 jobs:
   build-and-deploy:
@@ -22,13 +22,12 @@ jobs:
         run: npm install -g @slidev/cli
 
       - name: Build Slidev
-        # Replace 'slidev' below with your actual repo name if it's different
         run: slidev build --base /slidev/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GH_PAT }}  # Must have 'repo' scope
+          personal_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
           publish_branch: gh-pages
           keep_files: false

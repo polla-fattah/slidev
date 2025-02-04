@@ -3,7 +3,7 @@ name: Deploy Slidev to GitHub Pages
 on:
   push:
     branches:
-      - main  # Runs this workflow when changes are pushed to main
+      - main  # 
 
 jobs:
   build-and-deploy:
